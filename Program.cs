@@ -12,6 +12,23 @@ namespace LineComparisionProblem
             Console.WriteLine(result);
         }
 
+        
+        public static void UC_2_CheckLines(int a1, int b1, int a2, int b2)
+        {
+            int len1, len2;
+            if (a1 == a2)
+            {
+                Console.WriteLine(b1.Equals(b2));
+            }
+            else
+            {
+                len1 = b1 - a1;
+                len2 = b2 - a2;
+                Console.WriteLine(len1.Equals(len2));
+            }
+        }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to Line Comparison problem:");
@@ -23,6 +40,16 @@ namespace LineComparisionProblem
             int x2 = Convert.ToInt32(Console.ReadLine());
             int y2 = Convert.ToInt32(Console.ReadLine());
             Program.UC_1_Length(x1, y1, x2, y2);
+
+            Console.WriteLine("To Check Both Line Equals or not by Equals method");
+            Console.WriteLine("Enter start and end points of First line: ");
+            int a1 = Convert.ToInt32(Console.ReadLine());
+            int b1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter start and end points of Second line: ");
+            int a2 = Convert.ToInt32(Console.ReadLine());
+            int b2 = Convert.ToInt32(Console.ReadLine());
+            Program.UC_2_CheckLines(a1, b1, a2, b2);
+
 
         }
     }
